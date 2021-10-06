@@ -1,0 +1,10 @@
+{
+  "name": "cypressAPI",
+  "author": "Azarov Sergey",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^8.5.0"
+  }
+}

@@ -41,4 +41,4 @@ export class Authentication {
             expect(response.body.message).to.eq(testData.data.invalidBase64TokenMessage)
         });
     };
-};
+}

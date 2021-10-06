@@ -6,6 +6,6 @@ Running tests
 
 2. Run 'npm i'
 
-3. To run all API tests run 'npm runTests'
+3. To run all API tests run 'npm test'
 
 

@@ -1,9 +1,9 @@
-import { Authentification } from "../support/pageObject/authentification";
-import { setAssessRequest, setBase64Token } from "../support/pageObject/general";
+import { Authentication } from "../support/components/authentication";
+import { setAssessRequest, setBase64Token } from "../support/components/general";
 import { TestData } from "../support/testData/testData";
 
 const testData = new TestData();
-const authentification = new Authentification();
+const authentification = new Authentication();
 
 describe("Authentication",() => {
 

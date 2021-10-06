@@ -1,11 +1,11 @@
-import {setAccessToken, setSmsRequest} from "../support/pageObject/general";
-import {Authentification} from "../support/pageObject/authentification";
-import {Sms} from "../support/pageObject/sms";
+import {setAccessToken, setSmsRequest} from "../support/components/general";
+import {Authentication} from "../support/components/authentication";
+import {Sms} from "../support/components/sms";
 import {TestData} from "../support/testData/testData";
 
 const testData = new TestData();
 const sms = new Sms();
-const authentification = new Authentification();
+const authentification = new Authentication();
 
 describe("Sending sms", () => {
 

@@ -3,7 +3,7 @@ import {TestData} from "../testData/testData";
 
 const testData = new TestData();
 
-export class Authentification {
+export class Authentication {
     accessRequest() {
         return {
             async: true,

@@ -7,7 +7,7 @@ const testData = new TestData();
 const sms = new Sms();
 const authentification = new Authentification();
 
-describe("SMS Send", () => {
+describe("Sending sms", () => {
 
     beforeEach(() => {
         authentification.getToken();

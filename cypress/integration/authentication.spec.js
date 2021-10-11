@@ -3,23 +3,29 @@ import { setAssessRequest, setBase64Token } from "../support/components/general"
 import { TestData } from "../support/testData/testData";
 
 const testData = new TestData();
-const authentification = new Authentication();
+const authentication = new Authentication();
 
 describe("Authentication",() => {
 
     beforeEach(() => {
-        authentification.getToken();
+        authentication.getToken();
     })
 
     it("should be a valid token", () => {
         setBase64Token(testData.data.Base64Token);
-        setAssessRequest(authentification.accessRequest());
-        authentification.verifyAccessValid();
+        setAssessRequest(authentication.accessRequest());
+        authentication.verifyAccessValid();
     });
 
-    it("should be a invalid token", () => {
+    it("should be an error if empty token", () => {
         setBase64Token(testData.data.emptyRow);
-        setAssessRequest(authentification.accessRequest());
-        authentification.verifyAccessInvalidToken();
+        setAssessRequest(authentication.accessRequest());
+        authentication.verifyAccessEmptyToken();
+    });
+
+    it("should be an error if invalid token", () => {
+        setBase64Token(testData.data.wrongBase64Token);
+        setAssessRequest(authentication.accessRequest());
+        authentication.verifyAccessInvalidToken();
     });
 })

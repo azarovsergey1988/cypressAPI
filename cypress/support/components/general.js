@@ -1,7 +1,7 @@
 export let accessToken;
 export let base64Token;
 export let assessRequest;
-export let smsRequest;
+export let campaignRequest;
 
 export function setAccessToken(val) {
     accessToken = val;
@@ -15,7 +15,7 @@ export function setAssessRequest(val) {
     assessRequest = val;
 }
 
-export function setSmsRequest(val) {
-    smsRequest = val;
+export function setCampaignRequest(val) {
+    campaignRequest = val;
 }
 

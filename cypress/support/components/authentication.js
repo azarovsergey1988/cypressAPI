@@ -8,11 +8,11 @@ export class Authentication {
         return {
             async: true,
             crossDomain: true,
-            url: "https://auth.routee.net/oauth/token",
+            url: "https://emailapi.routee.net/oauth/access_token",
             method: "POST",
             headers: {
                 authorization: `Basic ${base64Token}`,
-                "content-type": "application/x-www-form-urlencoded"
+                "content-type": "application/json"
             },
             body: {
                 grant_type: "client_credentials"
@@ -32,6 +32,13 @@ export class Authentication {
             expect(response.status).to.eq(testData.data.status200)
             expect(response.body).to.have.property(testData.data.tokenAccessMessage)
             expect(response.body.token_type).to.eq(testData.data.validTokenType)
+        });
+    };
+    verifyAccessEmptyToken() {
+        cy.request(assessRequest).then((response) => {
+            expect(response.status).to.eq(testData.data.status400)
+            expect(response.body.error).to.eq(testData.data.invalidRequestError)
+            expect(response.body.message).to.eq(testData.data.invalidRequestMessage)
         });
     };
     verifyAccessInvalidToken() {

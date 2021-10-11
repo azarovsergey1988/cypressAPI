@@ -7,7 +7,6 @@ const testData = new TestData();
 const campaignCreation = new CampaignCreation();
 const authentication = new Authentication();
 
-
 describe("Creating a campaign", () => {
 
     beforeEach(() => {
@@ -92,11 +91,5 @@ describe("Creating a campaign", () => {
         campaignCreation.verifyCampaignResponse(testData.data.status422, testData.data.bookNotFoundMessage,
             testData.data.statusCode703);
     })
-
-
-
-
-
-
 
 })
